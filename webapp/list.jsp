@@ -28,18 +28,29 @@ System.out.println(personList);
 	<table border="1">
 		<tr>
 			<th>이름(name)</th>
-			<td><%= personList.get(i).getName() %></td>
+			<td><%=personList.get(i).getName()%></td>
 		</tr>
 		<tr>
 			<th>핸드폰(hp)</th>
-			<td><%= personList.get(i).getHp() %></td>
+			<td><%=personList.get(i).getHp()%></td>
 		</tr>
 		<tr>
 			<th>회사(company)</th>
-			<td><%= personList.get(i).getCompany() %></td>
+			<td><%=personList.get(i).getCompany()%></td>
+		</tr>
+		<tr>
+			<td>
+			<%=personList.get(i).getPersonId()%> 
+			<a href="/phonebook3/pbc?action=delete&no=<%=personList.get(i).getPersonId()%>">[삭제]
+			</td>
+			<td>
+			<%=personList.get(i).getPersonId()%>
+			<a href="/phonebook3/pbc?action=update&no=<%=personList.get(i).getPersonId()%>">[수정]
+			
+			</td>
 		</tr>
 	</table>
-	<br> 
+	<br>
 	<%
 	}
 	%>
