@@ -45,8 +45,8 @@ System.out.println(personList);
 			</td>
 			<td>
 			<%=personList.get(i).getPersonId()%>
-			<a href="/phonebook3/pbc?action=update&no=<%=personList.get(i).getPersonId()%>">[수정]
-			
+			<a href="/phonebook3/pbc?action=update&no=<%=personList.get(i).getPersonId()%>&name=<%=personList.get(i).getName()%>&hp=<%=personList.get(i).getHp()%>&company=<%=personList.get(i).getCompany()%>">[수정]
+			</a>
 			</td>
 		</tr>
 	</table>

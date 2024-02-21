@@ -1,6 +1,4 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ page import="java.util.List" %>
-<%@ page import="com.javaex.vo.PersonVo" %>
 
 <!DOCTYPE html>
 <html>
@@ -23,17 +21,17 @@
   <input type="hidden" name="no" value="<%=request.getAttribute("no")%>">
    <div>
       <label>이름(name)</label> <!-- 한줄 전체를 요소라고함. 태그 + 내용 -->
-      <input type="text" name="name" value="">
+      <input type="text" name="name" value="<%=request.getAttribute("name")%>">
    </div>
    
    <div>
       <label>핸드폰(hp)</label>
-      <input type="text" name="hp" value=""><!-- value는 입력되는 값이라 비워둠 -->
+      <input type="text" name="hp" value="<%=request.getAttribute("hp")%>"><!-- value는 입력되는 값이라 비워둠 -->
    </div>
    
    <div>
       <label>회사(company)</label>
-      <input type="text" name="company" value="">
+      <input type="text" name="company" value="<%=request.getAttribute("company")%>">
    </div>
    
    <input type="text" name="action" value="updateUser"> <!-- 여긴 입력하는 값이 아니라 value에 값 넣어줌. 안넣으면 insert가 안넘어와서 컨트롤러가 인식을 못함. 따라서 action에 값을 넣어주기 위해서 만들어줌. 개발할땐 text로 놓고 마지막에 hidden으로 안보이게하기 (내부개발용)-->
